@@ -1,0 +1,99 @@
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+w = QWidget()
+w.resize(300,300)
+w.setWindowTitle('Hello world!')
+w.show()
+sys.exit(app.exec_())
+
+________________
+
+import numpy as np
+
+#x = [1,2,3,4,5,6]
+#y = [a + 2 for a in x]
+
+nums = np.array([100,200,150])
+nums2 = nums * 1.6
+print(nums2)
+
+_________________
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Исходные данные
+x = [1,2,3,4,5]
+y = [2,4,6,8,10]
+
+plt.plot(x,y)
+plt.show()
+
+__________________________
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Исходные данные
+x = np.linspace(0,10,100)
+y = np.sin(x)
+
+plt.plot(x,y)
+plt.show()
+
+_________________
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Исходные данные
+
+
+x = np.random.rand(100)
+y = np.random.rand(100)
+colors = np.random.rand(100)
+sizes = 1000 * np.random.rand(100)   #1000 - размер точек
+#Создаем
+plt.scatter(x,y, c = colors, s = sizes)
+
+#Выводим график
+plt.show()
+
+___________________________
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+data1 = [10,20,30,40,300]
+
+x = range(len(data1))  # x - должен совпадать по длине с переменной data1  т.е x=range(5)
+
+# создаем
+
+plt.bar(x, data1, label = 'уровень')
+plt.legend()
+
+#Выводим график
+plt.show()
+
+_____________________________________
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+lab = ['apple', 'xiaomi', 'samsung']
+sizes = [50, 30,20]
+
+#Создаем
+
+fig, ax = plt.subplots()
+ax.pie(sizes, labels = lab)
+
+
+
+#Выводим график
+plt.show()
